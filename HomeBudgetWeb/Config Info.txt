@@ -1,0 +1,3 @@
+﻿
+Some useful info about config transform:
+http://sedodream.com/2010/10/21/ASPNETWebProjectsWebdebugconfigWebreleaseconfig.aspx
