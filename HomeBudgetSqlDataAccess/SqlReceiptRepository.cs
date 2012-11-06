@@ -29,12 +29,12 @@ namespace HomeBudget.SqlDataAccess
 
         public override IEnumerable<Domain.Entities.Receipt> GetReceiptsForAccount(string accountName)
         {
-            throw new NotImplementedException();
+            return null;
         }
 
         public override IEnumerable<Domain.Entities.Receipt> GetReceiptsForAccount(long accountId)
         {
-            throw new NotImplementedException();
+            return null;
         }
     }
 }

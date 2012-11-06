@@ -33,10 +33,10 @@ namespace HomeBudget.FakeDataAccess
         public FakeReceiptRepository()
         {
             // Sample data.
-            AddReceipt(new Domain.Entities.Receipt { ReceiptId = 0, Description = "Test1", Amount = 67.98M });
-            AddReceipt(new Domain.Entities.Receipt { ReceiptId = 0, Description = "Test2", Amount = 123.58M });
-            AddReceipt(new Domain.Entities.Receipt { ReceiptId = 0, Description = "Test3", Amount = 67.12M });
-            AddReceipt(new Domain.Entities.Receipt { ReceiptId = 0, Description = "Test4", Amount = 567.78M });
+            //AddReceipt(new Domain.Entities.Receipt { ReceiptId = 0, Description = "Test1", Amount = 67.98M });
+            //AddReceipt(new Domain.Entities.Receipt { ReceiptId = 0, Description = "Test2", Amount = 123.58M });
+            //AddReceipt(new Domain.Entities.Receipt { ReceiptId = 0, Description = "Test3", Amount = 67.12M });
+            //AddReceipt(new Domain.Entities.Receipt { ReceiptId = 0, Description = "Test4", Amount = 567.78M });
         }
 
         public override Domain.Entities.Receipt GetReceiptById(long receiptId)

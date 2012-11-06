@@ -59,7 +59,7 @@ namespace HomeBudget.XMLDataAccess
 
             if (query == null)
             {
-                throw new ArgumentNullException("accountName not found");
+                return null;
             }
 
             Domain.Entities.Account account = new Domain.Entities.Account();

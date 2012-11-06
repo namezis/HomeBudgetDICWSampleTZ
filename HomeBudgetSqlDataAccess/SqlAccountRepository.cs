@@ -25,12 +25,30 @@ namespace HomeBudget.SqlDataAccess
 
         public override IEnumerable<Domain.Entities.Account> GetAllAccounts()
         {
-            return context.Accounts.AsEnumerable().OrderBy(p => p.AccountName).Select(p => p.ToDomainAccount());
+            var accounts = (from r in context.Accounts
+                            orderby r.AccountName
+                            select r).AsEnumerable();
+            
+            return from a in accounts
+                   select a.ToDomainAccount();
         }
 
         public override Domain.Entities.Account GetAccountByName(string accountName)
         {
-            throw new NotImplementedException();
+            var query = (from r in context.Accounts
+                         where String.Compare(r.AccountName, accountName, true) == 0
+                         select r).FirstOrDefault();
+
+            Domain.Entities.Account retAccount = null;
+
+            if (query != null)
+            {
+                retAccount = new Domain.Entities.Account();
+                retAccount.AccountId = query.AccountId;
+                retAccount.AccountName = query.AccountName;
+            }
+
+            return retAccount;
         }
 
         public override void AddAccount(Domain.Entities.Account account)
